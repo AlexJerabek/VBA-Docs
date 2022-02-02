@@ -26,7 +26,7 @@ Calculating circular references with iterations is slow because multiple calcula
  
 Excel calculates circular references sheet-by-sheet without considering dependencies. Therefore, you usually get slow calculation if your circular references span more than one worksheet. Try to move the circular calculations onto a single worksheet or optimize the worksheet calculation sequence to avoid unnecessary calculations.
   
-Before the iterative calculations start, Excel must recalculate the workbook to identify all the circular references and their dependents. This process is equal to two or three iterations of the calculation. 
+Before the iterative calculations start, Excel must recalculate the workbook to identify all the circular references and their dependents. This process is equal to two or three iterations of the calculation.
   
 After the circular references and their dependents are identified, each iteration requires Excel to calculate not only all the cells in the circular reference, but also any cells that depend on the cells in the circular reference chain, together with volatile cells and their dependents. If you have a complex calculation that depends on cells in the circular reference, it can be faster to isolate this into a separate closed workbook and open it for recalculation after the circular calculation has converged.
   
